@@ -18,7 +18,7 @@ canvas.height = 800;
 |
 ▽ y축
 
-//단색으로 모양을 풀로 채우기 
+//단색으로 모양을 풀로 채우기 (fill + rect 함수)
 ctx.fillRect() 함수는 4개의 인자를 가지고 있다. 
                     ---> x,y,width,height
 
@@ -46,3 +46,45 @@ ctx.moveTo();
 
 //선을 그으면서 브러쉬 움직이기
 ctx.lineTo();
+
+
+//라인 굵기 변경
+ctx.lineWidth = 
+
+
+//집 그리기
+ctx.fillRect(200, 200, 50, 200);
+ctx.fillRect(400, 200, 50, 200);
+ctx.fillRect(300, 300, 50, 100);
+ctx.fillRect(200, 200, 200, 20);
+ctx.moveTo(200, 200);
+ctx.lineTo(325, 100);
+ctx.lineTo(450, 200);
+ctx.fill();
+
+
+////동그라미
+
+ctx.arc(x축, y축, 반지름, 동그라미 시작점, 동그라미 마지막지점 2 * Math.PI);
+
+https://www.w3schools.com/tags/canvas_arc.asp 
+참고사이트
+                
+
+사람 만들기
+
+ctx.fillRect(210 - 40, 200 - 20, 15,  100);
+ctx.fillRect(350 - 40, 200 - 20, 15,  100);
+ctx.fillRect(260 - 40, 200 - 20, 60, 200);
+
+//동그라미
+ctx.arc(250, 100, 50, 0, 2 * Math.PI);
+ctx.fill();
+
+//다른 경로의 색을 바꾸는 거니까 경로 변경
+ctx.beginPath();
+ctx.fillStyle = "white";
+ctx.arc(260 + 10, 80, 8, 0, 2 * Math.PI);
+ctx.arc(220 + 10 , 80, 8, 0, 2 * Math.PI);
+ctx.fill();
+
